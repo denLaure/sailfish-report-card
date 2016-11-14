@@ -1,0 +1,12 @@
+# Rename this file as report_card.changes to include changelog
+# entries in your RPM file.
+#
+# Add new changelog entries following the format below.
+# Add newest entries to the top of the list.
+# Separate entries from eachother with a blank line.
+
+# * date Author's Name <author's email> version-release
+# - Summary of changes
+
+* Sun Oct 26 2016 Denis Laure <den.laure@fruct.org> 1.0-1
+- First release

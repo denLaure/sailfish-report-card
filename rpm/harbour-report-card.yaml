@@ -1,0 +1,52 @@
+Name: harbour-report-card
+Summary: Application which allows to easily manage, track and log you own work time.
+Version: 1.0
+Release: 1
+# The contents of the Group field should be one of the groups listed here:
+# http://gitorious.org/meego-developer-tools/spectacle/blobs/master/data/GROUPS
+Group: Qt/Qt
+URL: http://fruct.org/
+License: MIT Licence
+# This must be generated before uploading a package to a remote build service.
+# Usually this line does not need to be modified.
+Sources:
+- '%{name}-%{version}.tar.bz2'
+Description: |
+  Report Card is your own personal task management application.
+  It allows you to plan and manage your work time. You can create task, set it’s start and end date and log time spent on it.
+  There is a simple and clear interface for editing tasks. Filters can be used to hide or show tasks which have already been done.
+  Application allows you to just start a timer for your current task and log the time when the job is done.
+  You can create a report for certain period of time which will contain information about tasks such as
+  its name and description, date, time spent on it and its status. Reports can be created in both HTML and CSV formats.
+Configure: none
+# The qtc5 builder inserts macros to allow QtCreator to have fine
+# control over qmake/make execution
+Builder: qtc5
+
+# This section specifies build dependencies that are resolved using pkgconfig.
+# This is the preferred way of specifying build dependencies for your package.
+PkgConfigBR:
+  - sailfishapp >= 1.0.2
+  - Qt5Core
+  - Qt5Qml
+  - Qt5Quick
+
+# Build dependencies without a pkgconfig setup can be listed here
+# PkgBR:
+#   - package-needed-to-build
+
+# Runtime dependencies which are not automatically detected
+Requires:
+  - sailfishsilica-qt5 >= 0.10.9 
+
+# All installed files
+Files:
+  - '%{_bindir}'
+  - '%{_datadir}/%{name}'
+  - '%{_datadir}/%{name}/translations'
+  - '%{_datadir}/applications/%{name}.desktop'
+  - '%{_datadir}/icons/hicolor/*/apps/%{name}.png'
+
+# For more information about yaml and what's supported in Sailfish OS
+# build system, please see https://wiki.merproject.org/wiki/Spectacle
+

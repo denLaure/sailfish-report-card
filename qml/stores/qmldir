@@ -1,0 +1,3 @@
+singleton TasksStore 0.1 TasksStore.qml
+singleton InformationAboutTask 0.1 InformationAboutTask.qml
+singleton TimerStore 0.1 TimerStore.qml
